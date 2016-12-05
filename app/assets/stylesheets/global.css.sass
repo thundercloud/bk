@@ -1,0 +1,41 @@
+$text-color: #006400//#89CC03
+$bg-color: #FFFFF0
+
+h1
+  font-size: 170%
+  font-weight: bold
+  padding: 0 0 12px 0
+  color: $text-color
+
+h2
+  font-size: 150%
+  font-weight: bold
+  padding: 0 0 10px 0  
+  color: $text-color
+
+h3
+  font-size: 120%
+  font-weight: bold
+  padding: 0 0 7px 0  
+  color: $text-color
+
+p
+  color: $text-color  
+
+@mixin border_radius($radius)
+  -moz-border-radius:    $radius
+  -webkit-border-radius: $radius
+  border-radius:         $radius  
+
+.container 
+  padding: 0 20px
+  margin: 0 auto
+  max-width: 1000px
+  min-width: 700px
+
+.rounded
+  border: 1px solid
+  margin-bottom: 5px  
+  padding: 5px
+  border: 1px solid $text-color
+  @include border_radius(5px)   
