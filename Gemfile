@@ -10,6 +10,7 @@ gem 'turbolinks',           '2.3.0'
 gem 'jbuilder',             '2.2.3'
 gem 'slim-rails'
 gem 'devise'
+gem 'activeadmin', github: 'gregbell/active_admin'
 
 
 group :doc do
