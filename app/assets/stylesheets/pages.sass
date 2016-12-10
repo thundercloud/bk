@@ -1,0 +1,90 @@
+// Place all the styles related to the Pages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+@import global
+
+.container 
+  padding: 0 20px
+  margin: 0 auto
+  max-width: 1000px
+  min-width: 700px
+
+.rounded
+  border: 1px solid
+  margin-bottom: 5px  
+  padding: 5px
+  border: 1px solid $text-color
+  @include border_radius(5px)   
+
+.row
+  display: inline-block      
+  width: 100%
+  
+.control-right
+  float: right
+  margin-left: 10px
+
+.control-left
+  float: left
+  margin-right: 10px  
+
+.control-center
+  margin: 0 auto
+
+.controls-center
+  text-align: center  
+
+.control-middle
+  line-height: 200%  
+
+.message-box
+  position: relative
+  height: 48px
+
+.message-text
+  position: absolute
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+  font-size: 110%
+  font-weight: bold
+
+.alert-box
+  background-color: $alert-bg-color
+  border: 1px solid $alert-text-color
+
+.alert-text  
+  color: $alert-text-color
+
+.notice-box
+  background-color: $notice-bg-color
+  border: 1px solid $notice-text-color
+
+.notice-text  
+  color: $notice-text-color
+
+#error_explanation
+  border: 1px solid
+  margin-bottom: 5px  
+  padding: 5px
+  border: 1px solid $alert-text-color
+  background-color: $alert-bg-color
+  @include border_radius(5px) 
+  
+  h2
+    font-size: 120%
+    font-weight: bold
+    color: $alert-text-color
+    padding: 0 0 0 0
+
+  ul li 
+    font-size: 110%
+    color: $alert-text-color
+
+.field_with_errors input
+  //background-color: $alert-bg-color
+  border: 1px solid $alert-text-color !important
+
+
+
