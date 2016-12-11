@@ -1,9 +1,13 @@
 div.rounded
-  = render 'layouts/messages'
+  //= render 'layouts/messages'
 
   div.user-login-form.control-center
     div.row.controls-center
       h2 Вход в личный кабинет
+
+    - if flash[:alert]
+      #error_explanation
+        h2 = alert  
 
     div.row.controls-center
       = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
