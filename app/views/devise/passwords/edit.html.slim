@@ -1,0 +1,15 @@
+div.rounded
+  div.user-form
+    h2 Ввод нового пароля
+
+    div
+      = form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :put }) do |f| 
+        = devise_error_messages!
+        = f.hidden_field :reset_password_token
+
+        = f.password_field :password, autofocus: true, autocomplete: "off", placeholder: "Пароль", class: 'input-user'
+        = f.password_field :password_confirmation, autocomplete: "off", placeholder: "Подтверждение пароля", class: 'input-user'
+
+        div.row.footer-btn
+          = f.submit "Сохранить", class: 'control-right control-middle'
+      
