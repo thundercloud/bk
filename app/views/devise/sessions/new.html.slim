@@ -1,25 +1,15 @@
-div.rounded
-  //= render 'layouts/messages'
+div.row.rounded
+  div.center.responsive
+    h2.text-center Вход в личный кабинет
 
-  div.user-login-form.control-center
-    div.row.controls-center
-      h2 Вход в личный кабинет
-
-    - if flash[:alert]
-      #error_explanation
-        h2 = alert  
-
-    div.row.controls-center
-      = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
-        = f.email_field :email, autofocus: true, placeholder: "Логин", class: 'input-user'
-        = f.password_field :password, autocomplete: "off", placeholder: "Пароль", class: 'input-user'
-
-        //- if devise_mapping.rememberable?
-        //  div.right
-        //    = f.check_box :remember_me
-        //    = f.label :remember_me
-
-        div.row.footer-btn
-          = f.submit "Войти", class: 'control-right control-middle'
-          = render "devise/shared/links"
-
+    = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+      div.form-group
+        = f.label 'Логин' 
+        = f.email_field :email, autofocus: true, class: 'form-control'
+      div.form-group
+        = f.label 'Пароль'
+        = f.password_field :password, autocomplete: "off", class: 'form-control'
+      div.form-group
+        = f.submit "Войти", class: 'btn btn-primary btn-lg btn-block'
+      div.form-group.rounded
+        = render "devise/shared/links"

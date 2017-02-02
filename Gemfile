@@ -11,6 +11,9 @@ gem 'jbuilder',             '2.2.3'
 gem 'slim-rails'
 gem 'devise'
 gem 'activeadmin', github: 'gregbell/active_admin'
+gem 'bootstrap-sass'
+gem 'autoprefixer-rails'
+
 
 
 group :doc do

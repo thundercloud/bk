@@ -1,15 +1,15 @@
 doctype html
 html
   head
-    title Белорусская Краса
+    title Беларуская Краса
     = favicon_link_tag "favicon.ico"
     = stylesheet_link_tag    "application", :media => "all" 
     = javascript_include_tag "application" 
     = csrf_meta_tags 
 
   body 
-    .container
+    div.container
       = render 'layouts/header'
       = render 'layouts/messages'
       == yield
-      = render 'layouts/footer'
+      = render 'layouts/footer'    

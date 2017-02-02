@@ -1,15 +1,14 @@
-div.rounded
-  div.user-registration-form.control-center
-    div.row.controls-center
-      h2 Восстановление пароля
+div.row.rounded
+  div.center.responsive
+    h2.text-center Восстановление пароля
 
-    div.row.controls-center
-      = form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f|
-        = devise_error_messages!
+    = form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f|
+      = devise_error_messages!
 
-        = f.email_field :email, autofocus: true, placeholder: "E-mail", class: 'input-user'
-
-        div.row.footer-btn
-          = f.submit "Восстановить", class: 'control-right control-middle'
-          = render "devise/shared/links"
-
+      div.form-group
+        = f.label 'Логин' 
+        = f.email_field :email, autofocus: true, placeholder: "E-mail", class: 'form-control'
+      div.form-group
+        = f.submit "Восстановить", class: 'btn btn-primary btn-lg btn-block'
+      div.form-group.rounded
+        = render "devise/shared/links"

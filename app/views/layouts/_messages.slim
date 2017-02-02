@@ -1,4 +1,9 @@
 div.row
-  - if flash[:notice]
-    div.rounded.message-box.notice-box
-      p.message-text.notice-text = notice
+  - flash.each do |name, msg| 
+    - if name == 'notice'
+      = content_tag :div, msg, class: "alert alert-success col-xs-12 text-center"
+    - elsif name == 'alert'
+      = content_tag :div, msg, class: "alert alert-danger col-xs-12 text-center"
+    - else
+      = content_tag :div, msg, class: "alert alert-#{name} col-xs-12 text-center"
+

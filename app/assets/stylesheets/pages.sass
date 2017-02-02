@@ -4,23 +4,20 @@
 
 @import global
 
-.container 
-  padding: 0 20px
-  margin: 0 auto
-  max-width: 1000px
-  min-width: 200px
+.center
+  margin: auto
+  top: 0
+  left: 0 
+  bottom: 0
+  right: 0
 
-.rounded
-  border: 1px solid
-  margin-bottom: 5px  
-  padding: 5px
-  border: 1px solid $text-color
-  @include border_radius(5px)   
+.responsive
+  width: 50%
+  height: 50%
+  min-width: 300px
+  max-width: 480px
+  padding: 12px
 
-.row
-  display: inline-block      
-  width: 100%
-  
 .control-right
   float: right
   margin-left: 10px
@@ -37,6 +34,18 @@
 
 .control-middle
   line-height: 200%  
+
+.form
+
+.input-container
+  margin: 0 auto
+  max-width: 480px
+  min-width: 72px
+
+.input-control 
+  width: 98%
+  
+  
 
 .message-box
   position: relative

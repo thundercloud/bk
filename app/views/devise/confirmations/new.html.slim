@@ -1,15 +1,14 @@
-div.rounded
-  div.user-registration-form.control-center
-    div.row.controls-center
-      h2 Запрос на письмо о регистрации
+div.row.rounded
+  div.center.responsive
+    h2.text-center Запрос на письмо о регистрации
 
-    div.row.controls-center
-      = form_for(resource, as: resource_name, url: confirmation_path(resource_name), html: { method: :post }) do |f|
-        = devise_error_messages!
+    = form_for(resource, as: resource_name, url: confirmation_path(resource_name), html: { method: :post }) do |f|
+      = devise_error_messages!
 
-        = f.email_field :email, autofocus: true, value: (resource.pending_reconfirmation? ? resource.unconfirmed_email : resource.email), placeholder: "E-mail", class: 'input-user'
-
-        div.row.footer-btn
-          = f.submit "Отправить письмо", class: 'control-right control-middle'
-          = render "devise/shared/links"
-
+      div.form-group
+        = f.label 'Логин' 
+        = f.email_field :email, autofocus: true, value: (resource.pending_reconfirmation? ? resource.unconfirmed_email : resource.email), placeholder: "E-mail", class: 'form-control'
+      div.form-group
+        = f.submit "Отправить письмо", class: 'btn btn-primary btn-lg btn-block'
+      div.form-group.rounded
+        = render "devise/shared/links"
