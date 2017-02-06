@@ -1,9 +1,15 @@
 div.row
-  - flash.each do |name, msg| 
+  - flash.each do |name, msg|
     - if name == 'notice'
-      = content_tag :div, msg, class: "alert alert-success col-xs-12 text-center" 
+      = content_tag :div, class: "alert alert-success col-xs-12 text-center"
+        span.glyphicon.glyphicon-exclamation-sign
+        span &nbsp; #{msg}
     - elsif name == 'alert'
-      = content_tag :div, msg, class: "alert alert-danger col-xs-12 text-center"
+      = content_tag :div, class: "alert alert-danger col-xs-12 text-center" 
+        span.glyphicon.glyphicon-warning-sign
+        span &nbsp; #{msg}
     - else
-      = content_tag :div, msg, class: "alert alert-#{name} col-xs-12 text-center"
+      = content_tag :div, class: "alert alert-#{name} col-xs-12 text-center"
+        span.glyphicon.glyphicon-exclamation-sign
+        span &nbsp; #{msg}
 

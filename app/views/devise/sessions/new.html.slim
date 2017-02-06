@@ -5,11 +5,20 @@ div.row.rounded
     = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
       div.form-group
         = f.label 'Логин' 
-        = f.email_field :email, autofocus: true, class: 'form-control'
+        div.input-group
+          span.input-group-addon
+            span.glyphicon.glyphicon-user
+          = f.email_field :email, autofocus: true, class: 'form-control'  
       div.form-group
         = f.label 'Пароль'
-        = f.password_field :password, autocomplete: "off", class: 'form-control'
+        div.input-group
+          span.input-group-addon
+            span.glyphicon.glyphicon-lock
+          = f.password_field :password, autocomplete: "off", class: 'form-control'
       div.form-group
-        = f.submit "Войти", class: 'btn btn-primary btn-lg btn-block'
+        /= f.submit "Войти", class: 'btn btn-primary btn-lg btn-block'
+        = button_tag type: 'submit', class: "btn btn-primary btn-lg btn-block" do
+          span.glyphicon.glyphicon-with-text.glyphicon-log-in.pull-left
+          span Войти
       div.form-group.rounded
         = render "devise/shared/links"

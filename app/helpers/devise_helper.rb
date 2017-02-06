@@ -6,7 +6,11 @@ module DeviseHelper
 
     html = <<-HTML
       <div class="alert alert-danger col-xs-12"> 
-        #{messages}
+        <span class="glyphicon glyphicon-warning-sign" aria-hidden="true"></span>
+        <span>&nbsp; Операция не была завершена успешно:</span>
+        <ul class="alert-list">
+          #{messages}
+        </ul>  
       </div>
     HTML
 

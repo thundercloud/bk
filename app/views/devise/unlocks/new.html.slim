@@ -8,8 +8,10 @@ div.row.rounded
       div.form-group
         = f.label 'Логин' 
         = f.email_field :email, autofocus: true, placeholder: "Логин", class: 'form-control'
-
       div.form-group
-          = f.submit "Разблокировать", class: 'btn btn-primary btn-lg btn-block'
+        /= f.submit "Разблокировать", class: 'btn btn-primary btn-lg btn-block'
+        = button_tag type: 'submit', class: "btn btn-primary btn-lg btn-block" do
+          span.glyphicon.glyphicon-with-text.glyphicon-envelope.pull-left
+          span Разблокировать
       div.form-group.rounded  
         = render "devise/shared/links"
