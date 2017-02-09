@@ -9,7 +9,6 @@ div.row.rounded
         = f.label 'Логин' 
         = f.email_field :email, autofocus: true, value: (resource.pending_reconfirmation? ? resource.unconfirmed_email : resource.email), placeholder: "E-mail", class: 'form-control'
       div.form-group
-        / = f.submit "Отправить письмо", class: 'btn btn-primary btn-lg btn-block'
         = button_tag type: 'submit', class: "btn btn-primary btn-lg btn-block" do
           span.glyphicon.glyphicon-with-text.glyphicon-envelope.pull-left
           span Отправить письмо             
