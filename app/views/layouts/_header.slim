@@ -1,10 +1,30 @@
-div.row.rounded style = "height: 200px"
-  - if user_signed_in?
-     ul
-       li 
-         p Здравствуйте, #{current_user.email}!  
-       li = link_to "Редактировать личные данные", edit_registration_path(current_user)  
-       li = link_to 'Выйти', destroy_user_session_path, :method => :delete
-  - else
-    =link_to "Войти", new_user_session_path
- 
+div.row
+  div.col-xs-12
+    img.header-logo src="/images/header_logo.png"
+      
+div.row
+  div.col-xs-12
+    div.pull-left
+      ul.nav.nav-pills
+        /li =link_to "Link 1", "#"
+
+    div.pull-right
+      ul.nav.nav-pills
+        li =link_to "#" do
+          span.glyphicon.glyphicon-phone 
+          span &nbsp; Заказать звонок        
+        - if user_signed_in?
+          li.dropdown role="presentation"
+            a.dropdown-toggle data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"
+              span.glyphicon.glyphicon-user
+              | &nbsp; Здравствуйте, #{current_user.email}!
+              span.caret
+
+            ul class="dropdown-menu"
+              li = link_to "Редактировать личные данные", edit_registration_path(current_user)  
+              li = link_to 'Выйти', destroy_user_session_path, :method => :delete  
+    
+        - else
+          li =link_to new_user_session_path
+            span.glyphicon.glyphicon-log-in 
+            span &nbsp; Войти    
