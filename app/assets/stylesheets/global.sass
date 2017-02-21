@@ -1,32 +1,54 @@
-$text-color: #000000
+$base-text-color: #000000
 $bg-color: #FFFFF0
 $border-color: #808080
+$main-text-color: #B40000
 
 $notice-bg-color: #98FB98 
 $notice-text-color: #3CB371
 $alert-bg-color: #FFDAB9
 $alert-text-color: #A94442
 
+
+
 h1
   font-size: 170%
   font-weight: bold
   padding: 0 0 12px 0
-  color: $text-color
+  color: $main-text-color !important
 
 h2
   font-size: 150%
   font-weight: bold
   padding: 0 0 10px 0  
-  color: $text-color
+  color: $main-text-color
 
 h3
   font-size: 120%
   font-weight: bold
   padding: 0 0 7px 0  
-  color: $text-color
+  color: $main-text-color
+
+h4
+  font-size: 100%
+  font-weight: bold
+  padding: 0 0 5px 0  
+  color: $main-text-color !important
+
+h5
+  font-size: 90%
+  font-weight: bold
+  padding: 0 0 3px 0  
+  color: $main-text-color !important
+
 
 p
-  color: $text-color  
+  color: $base-text-color  
+  font-size: 90%
+
+a  
+  span
+    color: $main-text-color 
+
 
 @mixin border_radius($radius)
   -moz-border-radius:    $radius

@@ -1,2 +1,33 @@
-div.row.rounded style = "height: 100px"
-  p Информация о юр.лице, ссылки, телефоны
+div.row
+   
+  div.col-xs-4
+    ul
+      li 
+        h5 УНП 1234567890 ИП Кысик 
+        h5 г.Минск, ул.Котейковская 4-1, 220000
+      li =link_to "#" do
+        span.glyphicon.glyphicon-credit-card
+        span &nbsp; Подробнее  
+
+  div.col-xs-4
+    h4 Обратная связь
+    ul
+      li =link_to "#" do
+        span.glyphicon.glyphicon-phone 
+        span &nbsp; Заказать звонок  
+      li =link_to "#" do
+        span.glyphicon.glyphicon-list-alt
+        span &nbsp; Контакты   
+
+  div.col-xs-4
+    h4 В интернете
+    ul
+      li =link_to "#" do
+        span.glyphicon.glyphicon-camera 
+        span &nbsp; Instagramm  
+      li =link_to "#" do
+        span.glyphicon.glyphicon-bold
+        span &nbsp; ВКонтакте    
+div.row
+  div.col-xs-12.text-center
+    h5 &copy; &nbsp; Все права защищены  
